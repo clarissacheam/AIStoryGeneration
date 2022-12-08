@@ -1,18 +1,21 @@
 ## -- Run using colab
-## -- Each comment as a section
+## -- Each # comment is a section
+
 
 # install gpt2 and tensorflow-gpu
 !pip install gpt-2-simple
 !pip install tensorflow-gpu
+
 
 # imports
 import nltk
 import os
 import csv
 import pandas as pd
+import gpt_2_simple as gpt2
 from tqdm import tqdm_notebook as tqdm
 from dataclasses import dataclass
-import gpt_2_simple as gpt2
+
 
 # data processing
 data = ["train", "test", "valid"]
@@ -48,6 +51,7 @@ for name_id in tqdm(range(len(data))):
 # !head working/test.wp_combined
 # !head working/valid.wp_combined
 
+
 # Model training
 model_name = "124M"
 if not os.path.isdir(os.path.join("models", model_name)):
@@ -60,6 +64,7 @@ gpt2.finetune(sess, 'working/train.wp_combined', model_name=model_name,
 
 gpt2.generate(sess)
 
+
 # creating the validation/dev set as a csv for evaluation
 valid_data = pd.read_csv("working/valid.wp_combined", 
                          names=['source_text', 'target_text'], 
@@ -67,6 +72,7 @@ valid_data = pd.read_csv("working/valid.wp_combined",
                          delimiter="<CLS>")
 
 valid_data.shape
+
 
 # evaluation
 total = 0
@@ -90,6 +96,7 @@ for source, target in zip(valid_data['source_text'], \
     print(ctr)
 data.close()
 print(total/ctr)
+
 
 # saving the model results
 from google.colab import files
