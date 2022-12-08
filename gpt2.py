@@ -68,6 +68,7 @@ valid_data = pd.read_csv("working/valid.wp_combined",
 
 valid_data.shape
 
+# evaluation
 total = 0
 ctr = 0
 
