@@ -33,3 +33,13 @@ Due to a lack of time, we restricted the story token size to 300 tokens to encou
 ### T5-small
 
 <img width="657" alt="Screen Shot 2022-12-08 at 1 14 46 PM" src="https://user-images.githubusercontent.com/72052259/206546682-b708a96c-52e8-49a1-a7dd-96c851f48d9c.png">
+
+## Our Results
+
+The average BLEU score corresponds to
+Coherence, Fluency, Interesting and Relevant correspond to scores from Amazon Mechanical Turk. Users were asked asked to rank the coherence, fluency, how interesting a sample was as well as how relevant the sample was to the prompt on a scale from 1 - 4, where 1 was least favorable and 4 was most favorable.
+Lastly, we ran the generated samples through Grammarly and averaged the resulting scores over 100 random samples.
+
+## Observations
+
+## Examples
