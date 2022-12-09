@@ -30,10 +30,6 @@ Our training dataset contained 272,600 stories mapped to about 104,000 prompts. 
 Due to a lack of time, we restricted the story token size to 300 tokens to encourage faster model building, as training on 735 tokens would take a long time. Additionally, we preprocced data with the <CLS> tag to separate prompts from stories and removed whitespaces. We decided to keep the <new line> tags, however, as some of the stories where written in the form of poetry or otherwise had paragraph structure that was essential to the story.
 
 ## Our Models
-### GPT2-small
-
-### T5-small
-
 <img width="657" alt="Screen Shot 2022-12-08 at 1 14 46 PM" src="https://user-images.githubusercontent.com/72052259/206546682-b708a96c-52e8-49a1-a7dd-96c851f48d9c.png">
 
 ## Our Results
