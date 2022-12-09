@@ -1,4 +1,5 @@
-# AIStoryGeneration
+# AI Story Generation (COMP SCI 496 Deep Generative Models taught by Prof. Bryan Pardo)
+
 
 ## Our Motivation
 Automated story generation is an exciting field of AI research that aims to generate good stories using technology. The quality of stories can be subjective and difficult to define, so there are multiple ways to evaluate them. In this blog, we will review and compare various Large Language Models (LLMs) for their ability to generate stories.
