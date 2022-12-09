@@ -40,7 +40,15 @@ Due to a lack of time, we restricted the story token size to 300 tokens to encou
 
 
 ## Our Results
-
+|              |  Methodology |   Original   | GPT-2(Small) |   T5(Small)  |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+|   Avg. BLEU  |  Calculated  |              | 1 [1e-10, 5] |  32 [28,40]  |
+|   Coherence  |      AMT     |   3.636 / 4  |   3.636 / 4  |   3.636 / 4  |
+|    Fluency   |      AMT     |   3.636 / 4  |   3.636 / 4  |   3.636 / 4  |
+|  Interesting |      AMT     |   3.636 / 4  |   3.636 / 4  |   3.636 / 4  |
+|   Relevancy  |      AMT     |   3.636 / 4  |   3.636 / 4  |   3.636 / 4  |
+|    Grammar   |   Grammarly  |  37.46 / 100 |  48.08 / 100 |  93.46 / 100 |
+ 
 The BLEU score is calculated by comparing each generated story with it's original counterpart. These scores are averaged out and reported as Avg. BLEU.
 
 Coherence, Fluency, Interesting and Relevant correspond to scores from Amazon Mechanical Turk. Users were asked asked to rank the coherence, fluency, how interesting a sample was as well as how relevant the sample was to the prompt on a scale from 1 - 4, where 1 was least favorable and 4 was most favorable.
