@@ -43,3 +43,28 @@ Lastly, we ran the generated samples through Grammarly and averaged the resultin
 ## Observations
 
 ## Examples
+### Prompt
+You are a serial killer. Each murder you commit adds a new voice to your head.
+
+**Original**
+  
+“Oh God, please don’t, please don’t” wailed the voices in my head. I wished they would shut up for a moment. They made it hard to hear if the girl in my trunk was waking up. 
+
+“Don’t do it, you sick bastard”. There was old man McAvoy, shouting over the rest. I was pretty sure he yelled so loud because he was deaf . After all, he really should have heard me in the alley behind him. It had been a cloudy night and I’d tripped over a rusty trashcan, but that old coot had kept on fumbling with his keys and stopping to rummage around in his pockets like he had all the time in the world, instead of four hours.
+
+I pulled into the parking lot of the motel where I was staying and cut the engine. As I approached the trunk of the car, the wailing crescendoed. “Cut it out”, I grumbled, rubbing the bridge of my nose, “Or I’ll take it out of her skin”.
+
+About half the voices fell silent. The other half were too crazy to listen or too angry to care, but the volume in my head was manageable at least. “You sick motherfucker ”, McAvoy railed. “I can’t wait til the cops catch ya. They’re gonna beat your sorry ass and stick you in the chair faster than… ” 
+
+“Faster than I can kill this girl? ” I muttered, lifting her
+
+**GPT2-small**
+
+Tyler Roberts was a man like nobody else. He was a serial killer.
+  
+**T5-small**
+
+I'm not sure what to do. It's just me, it's my job. I've been doing this for years now, and I've never seen anything like that before. I've always wanted to be a killer, but I wasn't the only one who would ever get into this world. But I didn't want to be a murderer, or even a murderer.
+
+I'm going to die.
+
