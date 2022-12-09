@@ -19,6 +19,8 @@ Apart from the aforementioned, story generation also highlights some of the impo
 ## Our Task
 ### Build 2 LLM(Large Language Models) to generate stories given a promopt and evaluate them grammatically and qualitatively.
 
+To compare the generated stories from each of the models, we will employ two methods: after randomly selecting a number of prompts, we will be evaluating the grammar correctness on Grammarly, and creativity through human evaluation on Amazon Mechanical Turk.
+
 ## Dataset: Writing Prompts
 The dataset that we used to train our models is the **WritingPrompts** dataset. The WritingPrompts dataset contains 300,000 writing prompts and written stories spanning 3 years that have been scraped with Reddit's official API and cleaned from Reddit's WritingPrompts forum, where users can posts prompts to inspire other users within the community. Each prompt in the WritingPrompts dataset may contain more than one corresponding story response. Stories in this dataset are more than 30 words.
 
@@ -36,11 +38,30 @@ Due to a lack of time, we restricted the story token size to 300 tokens to encou
 
 ## Our Results
 
-The average BLEU score corresponds to
+The average BLEU score compares the generated stories to the original human-written stories.
 Coherence, Fluency, Interesting and Relevant correspond to scores from Amazon Mechanical Turk. Users were asked asked to rank the coherence, fluency, how interesting a sample was as well as how relevant the sample was to the prompt on a scale from 1 - 4, where 1 was least favorable and 4 was most favorable.
 Lastly, we ran the generated samples through Grammarly and averaged the resulting scores over 100 random samples.
 
 ## Observations
+### Brevity
+
+T5 had a 128 token cut-off whereas GPT-2 had 300
+This might have caused the poor performance of GPT-2 even with 6x the run time
+ 
+### Grammarly Scores
+The difference in Grammarly scores were caused due to different reasons. For example, the original human-written stories’ poor Grammarly score can be attributed to intentional data punctuations:
+  
+Eg.1 (the spaces between the commas and words): He then looks down at his race torn by religion , hate , racism .
+  
+Eg.2 (the spaces between do and n't): `` Why do n't you have a seat ? '' Asked Christopher .
+
+GPT-2’s comparatively better Grammarly score is because Grammarly focuses on sentences more than sentence flow([References from Grammarly Blog](https://www.grammarly.com/blog/how-grammarly-uses-ai/)).
+
+Meanwhile, T5 has an overwhelming superior Grammarly score mostly due to shorter sentences generated, leading to less chances of grammer mistakes.
+  
+### T5 Repetitive starts
+Another point we noticed specifically with T5 story generations was about 3/4ths of the T5 stories start with the same phrases, in which we are unsure as to why. This requires additional research and would be a good direction for future work.
+<img width="303" alt="Screen Shot 2022-12-08 at 11 36 13 PM" src="https://user-images.githubusercontent.com/72052259/206631829-112f034a-388c-4763-8842-e0793a5a16c4.png">
 
 ## Examples
 ### Prompt
@@ -68,3 +89,72 @@ I'm not sure what to do. It's just me, it's my job. I've been doing this for yea
 
 I'm going to die.
 
+### Prompt
+"Some days , I think I am dying . Other days , I hope I am ..."
+  
+**Original**
+  
+Some days, I think I am dying. Other days, I hope I am. But i'm here.Unfortunately , I am still here. A shell of a human being. A painting of modest beauty but exquisite detail. Inside, however, lies a drawing soaked in black ink and torn to shreds. There's no beauty in such a world anymore. Just emptiness. Days upon days of gut wrentching emptiness and the sharp teeth of loneliness tearing away at your heels.
+
+Torment ; noun
+  
+1 . Severe physical or mental suffering.
+  
+And then you're presented with it. An escape. The smallest glint of light. You can practically feel the relief, the though of it making you happier than anything perhaps ever has. Your whole body tingles at the idea, fear and excitement clouding your desperate mind. If you had a cavity, you would want a dentist to remove it, would you not? It's been bothering you for weeks now, your teeth in more pain than they've ever been before. You can't eat you favorite things, you can't do any sports, you can hardly talk its so incredibly sore. The only thing on your mind is the pain. The constant never ending pain. How are you supposed to focus on anything with your jaw throbbing like this? It's impossible. But lucky you , there's a solution. A silver dentist with a loud booming voice, promising you to completely rid yourself of your nasty toothache.
+
+**GPT2-small**
+  
+ You 're killing yourself ? '' <newline> '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' , '' , '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' , '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' <newline> `` <newline> '' , '' , '' , '' <newline> `` <newline> '' , '' , '' <newline> `` <newline> '' , '' , '' <newline> `` <newline> '' , '' , '' <newline> `` <newline> '' , '' <newline> `` <newline> '' , '' <newline> `` <newline> '' , '' <newline> `` <newline> '' <newline> `` <newline> '' <newline> `` <newline> '' <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> `` <newline> ``
+  
+**T5-small**
+
+Some days, I think I am dying. Other days, I hope I am.''
+  
+What do you mean? ''
+  
+No, no, it's just me. ''
+  
+It's not my fault. ''
+  
+Yes, that's what I want. ''
+  
+### Prompt
+An army approached the pass. Only one being stood in there way. They did not plan to survive, just survive long enough.
+
+**Original**
+
+The march had been long and arduous but they had reached the pass. Tomorrow would be the final day of life for most of the army. The soldiers though had made their peace with God, and knew that what they were about to sacrifice gave the chance of hope for their families to survive.
+  
+The pass in front of them was the only link with the outside world , the only way for food to come and enter to the valley. That was until the beast appeared. It killed anything that entered the past and the valley had been slowly starving to death due to a drought that killed the harvest. Their only hope was to send messengers to the outside to gain the assistance of a legendary warrior.
+  
+The army sat around their campfires sharing one last round of somber laughs before tomorrow. The five fastest runners were already asleep ready to prepare for the mad dash they would attempt through the chaos. They carried the hope of all the valley. As the fires died that evening and the stars faded to the morning lights the men awoke ready for death.
+  
+The men stood , at arms just on the edge of the pass staring at their foe and death. It sat among a pile of bones at the center of the valley at his narrowest point. Its white fur glistened clean a pure, a contrast to the blood of those around it whom it had slain. Its red eyes stared at them glinting of chaos and death. Its nose twitched as if beckoning them to try and kill it. To most it
+
+**GPT2-small**
+
+I 'm not alone.
+  
+Not in a sense. I'm not the handiwork of a random assassin. I'm not a hero.
+  
+And I 'm not the man I 'm facing right now.
+  
+I 'm not a hero.
+  
+And I 'm not the man I 'm facing right now.
+  
+Not at all .
+  
+Not as the hero I am .
+
+**T5-small**
+
+I don't know what to expect, '' the army said.
+  
+What is it? ''
+  
+It's not like we are going to be here for long enough. ''
+  
+No, no, that's just me. ''
+  
+Well, this isn't my fault
