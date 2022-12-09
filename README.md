@@ -33,6 +33,11 @@ Due to a lack of time, we restricted the story token size to 300 tokens to encou
 ## Our Models
 <img width="657" alt="Screen Shot 2022-12-08 at 1 14 46 PM" src="https://user-images.githubusercontent.com/72052259/206546682-b708a96c-52e8-49a1-a7dd-96c851f48d9c.png">
 
+## GPT-2: Loss Over first 700 Iterations
+<img width="657" alt="Screen Shot 2022-12-08 at 1 14 46 PM" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Screen%20Shot%202022-12-09%20at%204.57.43%20PM.png">
+
+
+
 ## Our Results
 
 The BLEU score is calculated by comparing each generated story with it's original counterpart. These scores are averaged out and reported as Avg. BLEU.
