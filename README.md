@@ -38,8 +38,10 @@ Due to a lack of time, we restricted the story token size to 300 tokens to encou
 
 ## Our Results
 
-The average BLEU score compares the generated stories to the original human-written stories.
-Coherence, Fluency, Interesting and Relevant correspond to scores from Amazon Mechanical Turk. Users were asked asked to rank the coherence, fluency, how interesting a sample was as well as how relevant the sample was to the prompt on a scale from 1 - 4, where 1 was least favorable and 4 was most favorable.
+The BLEU score is calculated by comparing each generated story with it's original counterpart. These scores are averaged out and reported as Avg. BLEU.
+
+Coherence, Fluency, Interesting and Relevant correspond to scores from Amazon Mechanical Turk. Users were asked asked to rank the coherence, fluency, how interesting a sample was as well as how relevant the sample was to the prompt on a scale from 1 - 4, where 1 was least favorable and 4 was most favorable. (Processed Responses File can be seen the AMT.csv)
+
 Lastly, we ran the generated samples through Grammarly and averaged the resulting scores over 100 random samples.
 
 ## Observations
