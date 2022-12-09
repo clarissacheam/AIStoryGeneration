@@ -1,5 +1,5 @@
-# AI Story Generation (COMP SCI 496 Deep Generative Models taught by Prof. Bryan Pardo)
-
+# AI Story Generation
+This is a final project for COMP SCI 496 Deep Generative Models taught by Prof. Bryan Pardo at Northwestern University.
 
 ## Our Motivation
 Automated story generation is an exciting field of AI research that aims to generate good stories using technology. The quality of stories can be subjective and difficult to define, so there are multiple ways to evaluate them. In this blog, we will review and compare various Large Language Models (LLMs) for their ability to generate stories.
@@ -157,3 +157,10 @@ It's not like we are going to be here for long enough. ''
 No, no, that's just me. ''
   
 Well, this isn't my fault
+ 
+## Contact
+If you'd like to know more about the project, you may reach out to either of our team members!
+ 
+Clarissa Cheam (clarissa.cheam@gmail.com)
+ 
+Srik Gorthy (sskanthgorthy@gmail.com)
