@@ -20,6 +20,8 @@ Apart from the aforementioned, story generation also highlights some of the impo
 ## Our Task
 ### Build 2 LLM(Large Language Models) to generate stories given a promopt and evaluate them grammatically and qualitatively.
 
+<img width="650" alt="Modeling Process Flowchart" src="https://user-images.githubusercontent.com/72052259/206546682-b708a96c-52e8-49a1-a7dd-96c851f48d9c.png">
+
 To compare the generated stories from each of the models, we will employ two methods: after randomly selecting a number of prompts, we will be evaluating the grammar correctness on Grammarly, and creativity through human evaluation on Amazon Mechanical Turk.
 
 ## Dataset: Writing Prompts
@@ -34,8 +36,7 @@ Due to a lack of time, we restricted the story token size to 300 tokens to encou
 <img width="657" alt="Screen Shot 2022-12-08 at 1 14 46 PM" src="https://user-images.githubusercontent.com/72052259/206546682-b708a96c-52e8-49a1-a7dd-96c851f48d9c.png">
 
 ## GPT-2: Loss Over first 700 Iterations
-<img width="657" alt="Screen Shot 2022-12-08 at 1 14 46 PM" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Screen%20Shot%202022-12-09%20at%204.57.43%20PM.png">
-
+<img width="300" alt="GPT2 Model Loss" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Screen%20Shot%202022-12-09%20at%204.57.43%20PM.png">
 
 
 ## Our Results
@@ -68,6 +69,8 @@ Another point we noticed specifically with T5 story generations was about 3/4ths
 <img width="303" alt="Screen Shot 2022-12-08 at 11 36 13 PM" src="https://user-images.githubusercontent.com/72052259/206631829-112f034a-388c-4763-8842-e0793a5a16c4.png">
 
 ## Examples
+<img width="650" alt="Example 1 in image form" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Screen%20Shot%202022-12-09%20at%205.21.12%20PM.png"> 
+
 ### Prompt
 You are a serial killer. Each murder you commit adds a new voice to your head.
 
