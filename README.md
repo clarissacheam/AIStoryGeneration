@@ -20,7 +20,7 @@ Apart from the aforementioned, story generation also highlights some of the impo
 ## Our Task
 ### Build 2 LLM(Large Language Models) to generate stories given a promopt and evaluate them grammatically and qualitatively.
 
-<img width="650" alt="Modeling Process Flowchart" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Screen%20Shot%202022-12-09%20at%205.38.33%20PM.png">
+<img width="750" alt="Modeling Process Flowchart" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Screen%20Shot%202022-12-09%20at%205.38.33%20PM.png">
 
 To compare the generated stories from each of the models, we will employ two methods: after randomly selecting a number of prompts, we will be evaluating the grammar correctness on Grammarly, and creativity through human evaluation on Amazon Mechanical Turk.
 
