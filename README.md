@@ -77,13 +77,13 @@ Another point we noticed specifically with T5 story generations was about 3/4ths
 <img width="303" alt="Screen Shot 2022-12-08 at 11 36 13 PM" src="https://user-images.githubusercontent.com/72052259/206631829-112f034a-388c-4763-8842-e0793a5a16c4.png">
 
 ## Examples
-<img width="650" alt="Example 1 in image form" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Example1.png"> 
+<img width="800" alt="Example 1 in image form" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Example1.png"> 
 
-<img width="650" alt="Example 2 in image form" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Example2.png"> 
+<img width="800" alt="Example 2 in image form" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Example2.png"> 
 
-<img width="650" alt="Example 3 in image form" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Example3.png"> 
+<img width="800" alt="Example 3 in image form" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Example3.png"> 
 
-<img width="650" alt="Example 4 in image form" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Example4.png"> 
+<img width="800" alt="Example 4 in image form" src="https://github.com/clarissacheam/AIStoryGeneration/blob/main/Example4.png"> 
 
 
 ## Contact
